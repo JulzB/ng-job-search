@@ -1,0 +1,8 @@
+<div class="container-wrapper">
+    <ng-container *ngIf="fetchingError || this.favoriteJobs.length === 0">
+        <p class="fw-bold fs-3 text-center">No favorite jobs found...</p>
+    </ng-container>
+    <ng-container *ngFor="let favoriteJob of this.favoriteJobs">
+        <app-job-card [isFavorite]="true" [job]="favoriteJob"></app-job-card>
+    </ng-container>
+</div>

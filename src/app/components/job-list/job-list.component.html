@@ -1,0 +1,8 @@
+<div class="container-wrapper">
+    <ng-template *ngIf="fetchingError">
+        <p class="fw-bold fs-3 text-center">No Jobs found...</p>
+    </ng-template>
+    <ng-container *ngFor="let job of this.jobs">
+        <app-job-card [isFavorite]="false" [job]="job"></app-job-card>
+    </ng-container>
+</div>

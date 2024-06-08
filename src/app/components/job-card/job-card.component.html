@@ -1,0 +1,25 @@
+<div class="component-wrapper">
+    <div class="container mb-3">
+        <div class="row w-100">
+            <div class="col-2 d-flex justify-content-center">
+                <img [src]="job.companyLogo" class="m-2" width="100px" height="100px" alt="company logo">
+            </div>
+            <div class="col-9 mt-3">
+                <p class="fw-bold fs-3">
+                    <a [routerLink]="['job-details/', job.id]">{{job.title}}</a>
+                </p>
+                <div class="d-flex">
+                    <p class="fs-7">Company: {{job.companyName}}</p>
+                    <p class="fs-7">Reference: {{job.reference}}</p>
+                </div>
+            </div>
+            <div class="col-1 d-flex align-items-center">
+                <ng-container *ngIf="!isFavorite">
+                    <span [id]="'star-' + job.id" class="icon-star"
+                        [ngClass]="{'active': active}"
+                        (click)="manageFavoriteJob()"></span>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="component-wrapper">
+    <h1 class="text-center">Find your Job</h1>
+  
+    <ul class="nav justify-content-center w-100 p-0">
+      <div class="row w-100 no-gutters">
+        <div class="col-6 p-0">
+          <li class="nav-item w-100">
+            <a class="nav-link text-center w-100 p-3"
+                routerLink="/job-list"
+                routerLinkActive="active">
+                JOBS
+            </a>
+          </li>
+        </div>
+        <div class="col-6 p-0">
+          <li class="nav-item w-100">
+            <a class="nav-link text-center w-100 p-3"
+                routerLink="/favorite-list"
+                routerLinkActive="active">
+                FAVORITES
+            </a>
+          </li>
+        </div>
+      </div>
+    </ul>
+  
+    <div class="container mt-4">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  

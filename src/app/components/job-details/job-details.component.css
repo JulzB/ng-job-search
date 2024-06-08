@@ -1,0 +1,23 @@
+.container {
+    background-color: #eceff4;
+}
+
+a {
+    background-color: #c6c9cc;
+    color: #000000;
+    padding: 10px;
+    text-wrap: nowrap;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #aeb1b4;
+}
+
+span {
+    margin-right: 10px;
+}
+
+.ml-8 {
+    margin-left: 8px;
+}
