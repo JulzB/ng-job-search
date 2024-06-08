@@ -22,12 +22,6 @@ export class FavoriteListComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.favoriteJobService.favoriteJobs$
       .pipe(takeUntil(this.ngUnsubscribe))
-      .subscribe(favoriteJobs => {
-        this.favoriteJobs = favoriteJobs;
-      });
-
-    this.favoriteJobService.favoriteJobs$
-      .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe({
         next: (favoriteJobs) => this.favoriteJobs = favoriteJobs,
         error: (err) => {
